@@ -1,8 +1,16 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Portofolio KRISDAFI',
+  title: 'Portofolio - KRISDAFI',
   description: 'Portofolio KRISDAFI - Mahasiswa Sistem Informasi, Game Developer, Desain Grafis, dan Administrasi.',
+  // Ubah metadata url ke domain baru Anda
+  openGraph: {
+    title: 'KRISDAFI - Web Portofolio',
+    description: 'Mahasiswa Sistem Informasi | Game Developer & Desain Grafis',
+    url: 'https://krisdafi.github.io', 
+    siteName: 'Portofolio Krisdafi',
+    type: 'website',
+  },
   icons: {
     icon: 'https://i.ibb.co.com/qFXzr85s/vector2dme.png',
   },
