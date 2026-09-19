@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata = {
   title: 'Portofolio - KRISDAFI',
   description: 'Portofolio KRISDAFI - Mahasiswa Sistem Informasi, Game Developer, Desain Grafis, dan Administrasi.',
-  keywords: ['Krisdafi', 'Kris Dafi', 'Portofolio Krisdafi', 'Game Developer Krisdafi', 'Desain Grafis', 'Administrasi', 'SMK TUNAS MARKATIN', 'asa indo', 'ASA INDO', 'Univ asa indo', 'universitas asa indo', 'Universitas Asa Indo', 'Universitas AsaIndo'],
+  keywords: ['Krisdafi','Kris Dafi','Portofolio Krisdafi','Game Developer Krisdafi','Desain Grafis','Administrasi','SMK TUNAS MARKATIN','asa indo','ASA INDO','Univ asa indo','universitas asa indo','Universitas Asa Indo','Universitas AsaIndo','Krisdave','Kris Dave','KRISDAVE','dvae','dave','krisdave'],
   openGraph: {
     title: 'KRISDAFI - Web Portofolio',
     description: 'Mahasiswa Sistem Informasi | Game Developer & Desain Grafis',
