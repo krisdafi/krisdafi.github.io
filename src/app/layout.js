@@ -3,8 +3,7 @@ import './globals.css';
 export const metadata = {
   title: 'Portofolio - KRISDAFI',
   description: 'Portofolio KRISDAFI - Mahasiswa Sistem Informasi, Game Developer, Desain Grafis, dan Administrasi.',
-  // Keywords ditambahkan di sini agar Google mengenali nama Anda
-  keywords: ['Krisdafi', 'Kris Dafi', 'Portofolio Krisdafi', 'Game Developer Krisdafi', 'Desain Grafis', 'Administrasi'],
+  keywords: ['Krisdafi', 'Kris Dafi', 'Portofolio Krisdafi', 'Game Developer Krisdafi', 'Desain Grafis', 'Administrasi', 'SMK TUNAS MARKATIN', 'asa indo', 'ASA INDO', 'Univ asa indo', 'universitas asa indo', 'Universitas Asa Indo', 'Universitas AsaIndo'],
   openGraph: {
     title: 'KRISDAFI - Web Portofolio',
     description: 'Mahasiswa Sistem Informasi | Game Developer & Desain Grafis',
@@ -26,8 +25,8 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         
-        {/* TEMPEL KODE VERIFIKASI GOOGLE DI SINI */}
-        <meta name="google-site-verification" content="PASTE_KODE_ANDA_DI_SINI" />
+        {/* Kode verifikasi Google yang benar */}
+        <meta name="google-site-verification" content="ajxeMpXgETCU9bzC5eKELtznuvDJyT1uSGIViFhNSNc" />
       </head>
       <body className="bg-[#f9fafb] min-h-screen flex flex-col items-center p-4 md:p-8 overflow-x-hidden font-['Inter']">
         {children}
