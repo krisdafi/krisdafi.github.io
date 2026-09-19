@@ -302,7 +302,7 @@ export default function Home() {
                         
                         <div className="flex flex-col items-center gap-[15px] p-[25px] bg-[rgba(255,255,255,0.5)] rounded-[16px] border border-[rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.05)] w-full md:w-[calc(50%-15px)]">
                             <div className="flex justify-center w-full mb-[10px]">
-                                <img src="astro.png" alt="Logo Astro" className="h-[60px] w-auto max-w-[250px] object-contain bg-transparent mix-blend-multiply block mx-auto" />
+                                <img src="https://i.ibb.co.com/nN9f5NHX/astro.png" alt="Logo Astro" className="h-[60px] w-auto max-w-[250px] object-contain bg-transparent mix-blend-multiply block mx-auto" />
                             </div>
                             <h3 className="text-[18px] font-bold text-[#111827] text-left w-full mt-[10px]">PT Astro Technologies Indonesia</h3>
                             <table className="w-full text-[12px] text-[#6b7280] leading-[1.6] border-collapse text-left">
