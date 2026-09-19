@@ -3,7 +3,8 @@ import './globals.css';
 export const metadata = {
   title: 'Portofolio - KRISDAFI',
   description: 'Portofolio KRISDAFI - Mahasiswa Sistem Informasi, Game Developer, Desain Grafis, dan Administrasi.',
-  // Ubah metadata url ke domain baru Anda
+  // Keywords ditambahkan di sini agar Google mengenali nama Anda
+  keywords: ['Krisdafi', 'Kris Dafi', 'Portofolio Krisdafi', 'Game Developer Krisdafi', 'Desain Grafis', 'Administrasi'],
   openGraph: {
     title: 'KRISDAFI - Web Portofolio',
     description: 'Mahasiswa Sistem Informasi | Game Developer & Desain Grafis',
@@ -24,6 +25,9 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        
+        {/* TEMPEL KODE VERIFIKASI GOOGLE DI SINI */}
+        <meta name="google-site-verification" content="PASTE_KODE_ANDA_DI_SINI" />
       </head>
       <body className="bg-[#f9fafb] min-h-screen flex flex-col items-center p-4 md:p-8 overflow-x-hidden font-['Inter']">
         {children}
