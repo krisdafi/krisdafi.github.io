@@ -388,16 +388,54 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer id="kontak" className="w-full max-w-[1050px] bg-[rgba(10,25,47,0.85)] backdrop-blur-[8px] px-[20px] md:px-[60px] py-[40px] md:py-[60px] flex flex-col items-center gap-[20px] md:gap-[24px] rounded-[20px] md:rounded-[24px] mt-[40px] scroll-mt-[140px]">
-                <div className="flex gap-[20px] md:gap-[25px] flex-wrap justify-center">
-                    <a href="#" className="text-[rgba(255,255,255,0.5)] text-[20px] md:text-[24px] no-underline transition-all duration-300 hover:text-[#ffffff] hover:-translate-y-[4px]"><i className="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" className="text-[rgba(255,255,255,0.5)] text-[20px] md:text-[24px] no-underline transition-all duration-300 hover:text-[#ffffff] hover:-translate-y-[4px]"><i className="fa-solid fa-envelope"></i></a>
-                    <a href="#" className="text-[rgba(255,255,255,0.5)] text-[20px] md:text-[24px] no-underline transition-all duration-300 hover:text-[#ffffff] hover:-translate-y-[4px]"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="#" className="text-[rgba(255,255,255,0.5)] text-[20px] md:text-[24px] no-underline transition-all duration-300 hover:text-[#ffffff] hover:-translate-y-[4px]"><i className="fa-brands fa-github"></i></a>
-                    <a href="#" className="text-[rgba(255,255,255,0.5)] text-[20px] md:text-[24px] no-underline transition-all duration-300 hover:text-[#ffffff] hover:-translate-y-[4px]"><i className="fa-solid fa-briefcase"></i></a> 
+            <footer id="kontak" className="w-full max-w-[1050px] bg-[rgba(10,25,47,0.85)] backdrop-blur-[8px] px-[30px] md:px-[60px] py-[40px] md:py-[50px] flex flex-col gap-[30px] rounded-[20px] md:rounded-[24px] mt-[40px] scroll-mt-[140px] text-white">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[20px] w-full text-left">
+                    <div className="flex flex-col gap-[15px]">
+                        <h2 className="text-[28px] md:text-[32px] font-bold text-white">KRISDAFI</h2>
+                        <div className="flex flex-col gap-[5px]">
+                            <h3 className="text-[18px] font-semibold text-gray-300">Hubungi Saya</h3>
+                            <a href="mailto:krisdafi17@gmail.com" className="text-[14px] text-gray-400 hover:text-white transition-colors duration-300 no-underline">krisdafi17@gmail.com</a>
+                            <span className="text-[14px] text-gray-400">Jakarta Timur, Indonesia</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-[15px]">
+                        <h3 className="text-[18px] font-semibold text-white">Keahlian Utama</h3>
+                        <ul className="flex flex-col gap-[10px] list-none pl-0 m-0">
+                            <li><span className="text-[14px] text-gray-400">Administrasi & Data</span></li>
+                            <li><span className="text-[14px] text-gray-400">Game Development</span></li>
+                            <li><span className="text-[14px] text-gray-400">Desain Grafis</span></li>
+                        </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-[15px]">
+                        <h3 className="text-[18px] font-semibold text-white">Tautan</h3>
+                        <ul className="flex flex-col gap-[10px] list-none pl-0 m-0">
+                            {['Beranda', 'Tentang Saya', 'Portofolio', 'Pendidikan', 'Pengalaman', 'Kontak'].map((item) => (
+                                <li key={item}>
+                                    <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-[14px] text-gray-400 hover:text-white transition-colors duration-300 no-underline">
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-                <div className="text-[rgba(255,255,255,0.7)] text-[12px] flex items-center flex-wrap justify-center gap-[8px] text-center">
-                    dibuat oleh <a href="#" className="text-[#ffffff] no-underline font-bold px-[18px] py-[8px] border border-[rgba(255,255,255,0.4)] rounded-[20px] transition-all duration-300 bg-transparent hover:bg-[#ffffff] hover:text-[#0A192F] hover:border-[#ffffff]">KRISDAFI</a>
+
+                <div className="w-full h-[1px] bg-white/20 my-[10px]"></div>
+
+                <div className="flex flex-col items-center gap-[20px]">
+                    <div className="flex gap-[15px] justify-center">
+                        <a href="mailto:krisdafi17@gmail.com" className="w-[40px] h-[40px] rounded-full border border-white/50 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all duration-300 hover:-translate-y-[4px] no-underline">
+                            <i className="fa-solid fa-envelope text-[18px]"></i>
+                        </a>
+                        <a href="https://www.instagram.com/krisdave171" target="_blank" rel="noopener noreferrer" className="w-[40px] h-[40px] rounded-full border border-white/50 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-all duration-300 hover:-translate-y-[4px] no-underline">
+                            <i className="fa-brands fa-instagram text-[18px]"></i>
+                        </a>
+                    </div>
+                    <div className="text-[rgba(255,255,255,0.7)] text-[13px] text-center">
+                        Dibuat oleh <span className="text-[#a78bfa] font-semibold">KRISDAFI</span>, menggunakan <span className="text-[#38bdf8] font-semibold">Next.js & Tailwind CSS</span>.
+                    </div>
                 </div>
             </footer>
 
