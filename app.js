@@ -1,5 +1,4 @@
 function renderApp() {
-    // 1. Render Header & Brand
     const brandGroup = document.getElementById("brand-group");
     brandGroup.innerHTML = `
         <img src="${profileData.brand.logoUrl}" alt="Logo" class="nav-logo">
@@ -11,7 +10,6 @@ function renderApp() {
         <li><a href="${item.href}">${item.label}</a></li>
     `).join("");
 
-    // 2. Render Hero / Beranda
     const berandaSection = document.getElementById("beranda");
     berandaSection.innerHTML = `
         <div class="hero-text">
@@ -28,7 +26,6 @@ function renderApp() {
         </div>
     `;
 
-    // 3. Render Tentang Saya
     const aboutSection = document.getElementById("tentang-saya");
     aboutSection.innerHTML = `
         <h2 class="about-header">${aboutData.title}</h2>
@@ -46,7 +43,6 @@ function renderApp() {
         </div>
     `;
 
-    // 4. Render Portofolio
     const portfolioSection = document.getElementById("portofolio");
     portfolioSection.innerHTML = `
         <div class="portfolio-header-container">
@@ -56,7 +52,7 @@ function renderApp() {
         <div class="portfolio-grid">
             ${portfolioData.items.map(item => {
                 const hasMultiple = item.images.length > 1;
-                const linkAttrs = item.isExternal ? `target="_blank"` : `style="cursor: default;"`;
+                const linkAttrs = item.isExternal ? `target="_blank" rel="noopener noreferrer"` : `style="cursor: default;"`;
                 const descBlock = item.descriptionHtml
                     ? `<div class="desc-content line-clamp">${item.descriptionHtml}</div><span class="read-more-btn">Lihat Selengkapnya</span>`
                     : ``;
@@ -89,7 +85,6 @@ function renderApp() {
         </div>
     `;
 
-    // 5. Render Pendidikan
     const educationSection = document.getElementById("pendidikan");
     educationSection.innerHTML = `
         <div class="education-header-container">
@@ -115,7 +110,6 @@ function renderApp() {
         </div>
     `;
 
-    // 6. Render Pengalaman
     const experienceSection = document.getElementById("pengalaman");
     experienceSection.innerHTML = `
         <div class="education-header-container">
@@ -157,13 +151,13 @@ function renderApp() {
         </div>
     `;
 
-    // 7. Render Footer & Kontak
     const footerSection = document.getElementById("kontak");
     footerSection.innerHTML = `
         <div class="social-icons">
-            ${profileData.contacts.map(c => `
-                <a href="${c.href}" title="${c.title}"><i class="${c.iconClass}"></i></a>
-            `).join("")}
+            ${profileData.contacts.map(c => {
+                const isExternal = c.href.startsWith("http");
+                return `<a href="${c.href}" title="${c.title}"${isExternal ? ` target="_blank" rel="noopener noreferrer"` : ""}><i class="${c.iconClass}"></i></a>`;
+            }).join("")}
         </div>
         <div class="footer-credit">
             ${profileData.footer.creditPrefix} <a href="${profileData.footer.authorHref}" class="author-btn">${profileData.footer.authorName}</a>
@@ -226,7 +220,7 @@ function initInteractions() {
             const parent = this.parentElement;
             const content = parent.querySelector('.desc-content');
             
-            if (!content) return; 
+            if (!content) return;
 
             const isExpanded = content.classList.contains('expanded');
 
@@ -234,7 +228,7 @@ function initInteractions() {
                 if (expandedContent !== content) {
                     expandedContent.classList.remove('expanded');
                     const otherBtn = expandedContent.parentElement.querySelector('.read-more-btn');
-                    if(otherBtn) otherBtn.textContent = 'Lihat Selengkapnya';
+                    if (otherBtn) otherBtn.textContent = 'Lihat Selengkapnya';
                 }
             });
 
@@ -274,16 +268,16 @@ function initInteractions() {
                 currentImageIndex = index;
                 updateLightboxContent();
                 lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden'; 
+                document.body.style.overflow = 'hidden';
             });
         });
     });
 
     function updateLightboxContent() {
-        if(currentGroupImages.length > 0) {
+        if (currentGroupImages.length > 0) {
             lightboxImg.src = currentGroupImages[currentImageIndex];
             
-            if(currentGroupImages.length <= 1) {
+            if (currentGroupImages.length <= 1) {
                 lbPrev.style.display = 'none';
                 lbNext.style.display = 'none';
             } else {
@@ -295,7 +289,7 @@ function initInteractions() {
 
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto'; 
+        document.body.style.overflow = 'auto';
     }
 
     lbClose.addEventListener('click', closeLightbox);
@@ -317,7 +311,7 @@ function initInteractions() {
     });
     
     document.addEventListener('keydown', (e) => {
-        if(!lightbox.classList.contains('active')) return;
+        if (!lightbox.classList.contains('active')) return;
         
         if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowRight' && currentGroupImages.length > 1) {
