@@ -22,11 +22,9 @@ const profileData = {
         photoAlt: "Foto Profil KRISDAFI"
     },
     contacts: [
-        { title: "WhatsApp", href: "#", iconClass: "fa-brands fa-whatsapp" },
-        { title: "Gmail", href: "#", iconClass: "fa-solid fa-envelope" },
-        { title: "Instagram", href: "#", iconClass: "fa-brands fa-instagram" },
-        { title: "Github", href: "#", iconClass: "fa-brands fa-github" },
-        { title: "Glints", href: "#", iconClass: "fa-solid fa-briefcase" }
+        { title: "Gmail", href: "mailto:krisdafi17@gmail.com", iconClass: "fa-solid fa-envelope" },
+        { title: "GitHub", href: "https://github.com/krisdafi/krisdafi.github.io", iconClass: "fa-brands fa-github" },
+        { title: "Instagram", href: "https://instagram.com/krisdave171", iconClass: "fa-brands fa-instagram" }
     ],
     footer: {
         creditPrefix: "dibuat oleh",
